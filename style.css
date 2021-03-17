@@ -1,27 +1,6 @@
-h2 {
-	color: red;
-	background-color: lightgreen;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 
-div h2 {
-	color: green;
-}
 
-body {
-    background-color: #193c6d;
-    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
-    background-image: url(//img.alicdn.com/tps/TB1d.u8MXXXXXXuXFXXXXXXXXXX-1900-790.jpg);
-    background-size: 100%;
-    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
-    background-image: -webkit-linear-gradient(135deg, #003073, #029797);
-    background-image: -moz-linear-gradient(45deg, #003073, #029797);
-    background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
-    background-image: -o-linear-gradient(45deg, #003073, #029797);
-    background-image: linear-gradient(135deg, #003073, #029797);
-    text-align: center;
-    margin: 0px;
-    overflow: hidden;
-}
 
 .highcharts-figure, .highcharts-data-table table {
   min-width: 360px; 
@@ -60,6 +39,56 @@ body {
 div {
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-right: 60px;
-  margin-left: 60px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+body {
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 45s ease infinite;
+-o-animation: rainbow 45s ease infinite;
+  animation: rainbow 45s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+
+#rcorners1 {
+  font-family: 'Dosis', sans-serif;
+  color: orangered;
+  font-size: 50px;
+  font-weight: 300;
+  border-radius: 28px;
+  background: #fff;
+  padding: 12px; 
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  line-height: 58px;
+}
+
+
+
+
+
