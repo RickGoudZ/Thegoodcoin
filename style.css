@@ -56,3 +56,10 @@ body {
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+
+div {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
