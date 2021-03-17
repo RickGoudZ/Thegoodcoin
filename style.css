@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
-
+body {
+  background-image: url("/pictures/25552.jpg");
+	background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ccc;
+}
 
 
 .highcharts-figure, .highcharts-data-table table {
@@ -43,7 +48,7 @@ div {
   margin-left: auto;
 }
 
-body {
+/*body {
 	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 background-size: 1800% 1800%;
 
@@ -73,7 +78,7 @@ background-size: 1800% 1800%;
     100%{background-position:0% 82%}
 }
 
-
+*/
 #rcorners1 {
   font-family: 'Dosis', sans-serif;
   color: orangered;
