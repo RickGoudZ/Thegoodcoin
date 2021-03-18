@@ -1,9 +1,13 @@
 // JavaScript Document
-function setup() {
-  loadJSON('thegoodcoin.nl/test.json', gotData, 'jsonp');
-}
-
-function gotData(data) {
-  print(data);
-  spaceData = data;
-}
+var jqxhr = $.getJSON( "test.json", function() {
+  console.log( "success" );
+})
+  .done(function() {
+    console.log( "second success" );
+  })
+  .fail(function() {
+    console.log( "error" );
+  })
+  .always(function() {
+    console.log( "complete" );
+  });
