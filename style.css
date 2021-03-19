@@ -110,12 +110,13 @@ div {
 #rowtitle {
 	font-family: 'Roboto', sans-serif; 
 	vertical-align: top;
+	margin: 10px
 }
 
 #rowdata {
 	font-family: 'Roboto', sans-serif;
-	float: left;
-	position: top;
+	position: left;
+	text-align: left;
 }
 
 
