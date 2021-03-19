@@ -3,93 +3,14 @@
   <head> 
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>My first chart</title>
+    <title>Dashboard</title>
 	<script src="https://code.highcharts.com/highcharts.js"></script> 
  <script src="https://code.highcharts.com/highcharts.js"></script>  </head> 
   <body> 
 	  <p id="rcorners1">thegoodcoin</p>
-	  <div id="container"></div>
-		<script>
-			Highcharts.chart('container', {
-			  chart: {
-						renderTo: 'container',
-						backgroundColor: 'transparent',
-						type: 'line'
-					},
-			  title: {
-				text: ''
-			  },
 
-			  subtitle: {
-				text: ''
-			  },
-
-			  yAxis: {
-				title: {
-				  text: 'Number of Employees'
-				}
-			  },
-
-			  xAxis: {
-				accessibility: {
-				  rangeDescription: 'Range: 2010 to 2017'
-				}
-			  },
-
-			  legend: {
-				layout: 'vertical',
-				align: 'right',
-				verticalAlign: 'middle'
-			  },
-
-			  plotOptions: {
-				series: {
-				  label: {
-					connectorAllowed: false
-				  },
-				  pointStart: 2010
-				}
-			  },
-
-			  series: [{
-				name: 'Installation',
-				data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-			  }, {
-				name: 'Manufacturing',
-				data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-			  }, {
-				name: 'Sales & Distribution',
-				data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-			  }, {
-				name: 'Project Development',
-				data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-			  }, {
-				name: 'Other',
-				data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-			  }],
-
-			  responsive: {
-				rules: [{
-				  condition: {
-					maxWidth: 500
-				  },
-
-				  chartOptions: {
-					legend: {
-					  layout: 'horizontal',
-					  align: 'center',
-					  verticalAlign: 'bottom'
-
-					}
-				  }
-				}]
-			  }
-
-			});
-	   </script>
-	</div>
-	<div>
     <div id="rcorners2">
+		<div>
 		<div id="rowc1">
 			<a href="/pictures/350z.jpg"><img src="/pictures/350z.jpg" id="carimg" alt="350z icon"></a>
             <h3 id="rowtitle">350z</h3>
@@ -101,6 +22,96 @@
             <h3 id="rowtitle">R8</h3>
 			<p id="rowdata">Average : 69,420</p>
 		</div>
-		
-	
+		<div id="rowc1">
+		<a href="/pictures/r8.jpg"><img src="/pictures/r8.jpg" id="carimg" alt="350z icon"></a>
+            <h3 id="rowtitle">R8</h3>
+			<p id="rowdata">Average : 69,420</p>
+		</div>
+		<div id="rowc1">
+		<a href="/pictures/r8.jpg"><img src="/pictures/r8.jpg" id="carimg" alt="350z icon"></a>
+            <h3 id="rowtitle">R8</h3>
+			<p id="rowdata">Average : 69,420</p>
+		</div>
 	</div>
+		<div id="chartborder1">
+			  <div id="container"></div>
+				<script>
+					Highcharts.chart('container', {
+					  chart: {
+								renderTo: 'container',
+								backgroundColor: 'transparent',
+								type: 'line'
+							},
+					  title: {
+						text: ''
+					  },
+
+					  subtitle: {
+						text: ''
+					  },
+
+					  yAxis: {
+						title: {
+						  text: 'price'
+						}
+					  },
+
+					  xAxis: {
+						accessibility: {
+						  rangeDescription: 'Range: 2010 to 2017'
+						}
+					  },
+
+					  legend: {
+						layout: 'vertical',
+						align: 'right',
+						verticalAlign: 'middle'
+					  },
+
+					  plotOptions: {
+						series: {
+						  label: {
+							connectorAllowed: false
+						  },
+						  pointStart: 2010
+						}
+					  },
+
+					  series: [{
+						name: 'Installation',
+						data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+					  }, {
+						name: 'Manufacturing',
+						data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+					  }, {
+						name: 'Sales & Distribution',
+						data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+					  }, {
+						name: 'Project Development',
+						data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
+					  }, {
+						name: 'Other',
+						data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+					  }],
+
+					  responsive: {
+						rules: [{
+						  condition: {
+							maxWidth: 500
+						  },
+
+						  chartOptions: {
+							legend: {
+							  layout: 'horizontal',
+							  align: 'center',
+							  verticalAlign: 'bottom'
+
+							}
+						  }
+						}]
+					  }
+
+					});
+			   </script>
+			</div>
+				</div>

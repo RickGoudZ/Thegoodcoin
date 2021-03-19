@@ -75,7 +75,7 @@ div {
   background: #0B0B0B;
   padding: 12px; 
   width: 95%;
-  height: 500px;
+  height: 600px;
   text-align: center;
   line-height: 44px;
   position: center center;
@@ -119,3 +119,11 @@ div {
 	text-align: left;
 }
 
+#chartborder1 {
+	background: #282828;
+	border-radius: 12px;
+	width: 61.8%;
+	height: auto;
+	float: left;
+	margin: 10px 10px;
+}
