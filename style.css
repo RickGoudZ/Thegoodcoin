@@ -6,7 +6,7 @@ body {
   background-position: center center;
   background-color: #002046;
   background-size: 100%;
-  background-position:center top;
+  background-position: center top;
 }
 
 
@@ -17,7 +17,7 @@ body {
 }
 
 .highcharts-data-table table {
-	font-family: Verdana, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	border-collapse: collapse;
 	border: 1px solid #EBEBEB;
 	margin: 10px auto;
@@ -41,7 +41,7 @@ body {
   background: #f8f8f8;
 }
 .highcharts-data-table tr:hover {
-  background: #f1f7ff;
+  background: #9E9E9E;
 }
 
 div {
