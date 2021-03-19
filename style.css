@@ -101,13 +101,13 @@ background-size: 1800% 1800%;
   font-size: 32px;
   font-weight: 300;
   border-radius: 28px;
-  background: #fff;
+  background: #3C3C3C;
   padding: 12px; 
-  width: 200px;
-  height: 45px;
+  width: 95%;
+  height: 500px;
   text-align: center;
   line-height: 44px;
-  position: center;
+  position: center center;
 }
 
 
