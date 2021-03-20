@@ -2,11 +2,11 @@
 var staticUrl = 'https://www.thegoodcoin.nl/test.json';
 
 $.ajax({
-    url: staticUrl,
+    url: 'https://www.thegoodcoin.nl/test.json',
 
     dataType: "jsonp",
-    success: function( response ) {
-        console.log( response ); // server response
+    success: function(response) {
+        console.log(response); // server response
     }
 
 });
@@ -16,5 +16,5 @@ $.ajax({
 
 function fonctiont() {	
 		var output = document.getElementById('jsont');
-		output.innerHTML = 'new content';
+		output.innerHTML = response;
 }
