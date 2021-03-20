@@ -1,8 +1,9 @@
 // JavaScript Document
 var staticUrl = 'https://jsonplaceholder.typicode.com/users';
 
-$.getJSON(staticUrl, function(data){
-	console.log(data)
+var nissan = $.getJSON(staticUrl, function(data){
+				console.log(data)
+				console.log(nissan)
 });
 
 function fonctiont() {	
