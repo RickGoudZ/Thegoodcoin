@@ -1,5 +1,5 @@
 // JavaScript Document
-var staticUrl = 'https://thegoodcoin.nl/test.json?callback=?';
+var staticUrl = 'https://thegoodcoin.nl/test.json'
 
 /*var nissan = $.getJSON(staticUrl, function(data){
 				output = jsonp&callback=?
