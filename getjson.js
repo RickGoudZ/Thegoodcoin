@@ -1,7 +1,7 @@
 // JavaScript Document
 
 $.getJSON('test.json', function(data){
-				console.log(data.date)
+				console.log(data.z)
 				console.log(typeof data)
 				//data = JSON.stringify(data)
 				//data = Object.values(data);
