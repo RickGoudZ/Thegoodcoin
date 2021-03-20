@@ -1,8 +1,7 @@
 // JavaScript Document
-var staticUrl = 'https://jsonplaceholder.typicode.com/users'
 
 $.getJSON('test.json', function(data){
-				console.log(data.z.date)
+				console.log(data.date)
 				console.log(typeof data)
 				//data = JSON.stringify(data)
 				//data = Object.values(data);
