@@ -1,7 +1,7 @@
 // JavaScript Document
 var staticUrl = 'https://thegoodcoin.nl/test.json?callback=?';
 
-var nissan = $.getJSON(staticUrl, function(data){
+/*var nissan = $.getJSON(staticUrl, function(data){
 				output = jsonp&callback=?
 				console.log(data)
 				console.log(output)
@@ -11,4 +11,16 @@ var nissan = $.getJSON(staticUrl, function(data){
 				//var output = document.getElementById('jsont');
 				//output.innerHTML = data[1];
 				document.getElementById('jsont').innerHTML = data;
+});*/
+
+$.ajax({
+    url: staticUrl,
+    dataType: 'JSONP',
+    jsonpCallback: 'callback',
+    type: 'GET',
+    success: function (data) {
+        console.log(data);
+		document.getElementById('jsont').innerHTML = data;
+
+    }
 });
