@@ -7,5 +7,5 @@ $.getJSON(staticUrl, function(data){
 
 function fonctiont() {	
 		var output = document.getElementById('jsont');
-		output.innerHTML = 'new content';
+		output.innerHTML = data;
 }
