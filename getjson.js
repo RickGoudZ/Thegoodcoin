@@ -1,5 +1,5 @@
 // JavaScript Document
-var staticUrl = 'https://jsonplaceholder.typicode.com/users';
+var staticUrl = 'https://thegoodcoin.nl/test.json?callback=?';
 
 var nissan = $.getJSON(staticUrl, function(data){
 				console.log(data)
@@ -8,8 +8,5 @@ var nissan = $.getJSON(staticUrl, function(data){
 
 				//var output = document.getElementById('jsont');
 				//output.innerHTML = data[1];
-				document.getElementById('jsont').innerHTML = data[1];
+				document.getElementById('jsont').innerHTML = data;
 });
-"350z":[
-	{"date":"03-12-2021", "price":"16340"},
-	{"date":"04-12-2021", "price":"16230"}
