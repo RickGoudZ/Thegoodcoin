@@ -1,5 +1,5 @@
 // JavaScript Document
-var staticUrl = 'https://thegoodcoin.nl/test.json';
+var staticUrl = 'https://jsonplaceholder.typicode.com/users';
 
 $.getJSON(staticUrl, function(data){
 	console.log(data)
