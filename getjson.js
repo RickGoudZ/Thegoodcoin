@@ -4,6 +4,6 @@ function fonctiont() {
 		output.innerHTML = 'new content';
 }
 
-/*var staticUrl = 'https://thegoodcoin.nl/test.json'
+var staticUrl = 'https://thegoodcoin.nl/test.json'
 
 $.getjson(staticUrl, function(data))

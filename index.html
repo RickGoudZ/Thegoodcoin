@@ -116,9 +116,21 @@
 
 					});
 			   </script>
-
+               <script>	   				   
+				    var staticUrl = 'https://jsonplaceholder.typicode.com/users'
+                    $.getJSON(staticUrl, function(data){
+						console.log(data)
+					});
+			</script>              
+			<script>
+					function fonctiont() {
+				    var output = document.getElementById('jsont');
+				    output.innerHTML = data;
+		            };
+			  </script>
+			
 			</div>
-		<h1>"The value for number is: " <span id="jsont"></span></h1>
-				</div>
+			</div>
+	  <h1>"The value for number is: " <span id="jsont"></span></h1>
 	</body>
 	</html>
