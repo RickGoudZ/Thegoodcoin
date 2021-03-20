@@ -1,12 +1,11 @@
 // JavaScript Document
-function fonctiont() {
-var staticUrl = 'https://www.thegoodcoin.nl/test.json';
+var staticUrl = 'https://thegoodcoin.nl/test.json';
 
-var nissan = $.getJSON(staticUrl, function(nissan){
-console.log(nissan);
+$.getjson(staticUrl, function(data){
+	console.log(data)
 });
 
-
+function fonctiont() {	
 		var output = document.getElementById('jsont');
-		output.innerHTML = nissan;
+		output.innerHTML = 'new content';
 }
