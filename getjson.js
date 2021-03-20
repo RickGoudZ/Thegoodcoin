@@ -2,7 +2,7 @@
 $.getJSON('test.json', function(data){
 				console.log(data.zp)
 				console.log(typeof data)
-				data = JSON.stringify(data)
+				//data = JSON.stringify(data)
 				//data = Object.values(data);
 
 				//var output = document.getElementById('jsont');
