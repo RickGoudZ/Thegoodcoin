@@ -6,10 +6,9 @@
     <title>Dashboard</title>
 	<script src="https://code.highcharts.com/highcharts.js"></script> 
  	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="getjson.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head> 
-  <body onload="fonctiont()"> 
+  <body onload="fonctiont();"> 
 	  <p id="rcorners1">thegoodcoin</p>
 
     <div id="rcorners2">
@@ -116,21 +115,9 @@
 
 					});
 			   </script>
-               <script>	   				   
-				    var staticUrl = 'https://jsonplaceholder.typicode.com/users'
-                    $.getJSON(staticUrl, function(data){
-						console.log(data)
-					});
-			</script>              
-			<script>
-					function fonctiont() {
-				    var output = document.getElementById('jsont');
-				    output.innerHTML = data;
-		            };
-			  </script>
-			
 			</div>
 			</div>
+	  <script src="getjson.js" type="text/javascript"></script>
 	  <h1>"The value for number is: " <span id="jsont"></span></h1>
 	</body>
 	</html>
