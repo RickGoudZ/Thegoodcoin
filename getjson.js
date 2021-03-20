@@ -1,8 +1,8 @@
 // JavaScript Document
 $.getJSON('test.json', function(data){
-				console.log(data.z[0].date)
+				console.log(data)
 				console.log(typeof data)
-				//data = JSON.stringify(data)
+				data = JSON.stringify(data)
 				//data = Object.values(data);
 
 				//var output = document.getElementById('jsont');

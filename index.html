@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 	<script src="https://code.highcharts.com/highcharts.js"></script> 
- 	<script src="https://code.highcharts.com/highcharts.js"></script>
+ 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head> 
   <body> 
@@ -59,9 +59,9 @@
 					  },
 
 					  xAxis: {
-						accessibility: {
-						  rangeDescription: 'Range: 2010 to 2017'
-						}
+						categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+						  //min: 0,
+						  //max: 12,
 					  },
 
 					  legend: {
@@ -75,13 +75,13 @@
 						  label: {
 							connectorAllowed: false
 						  },
-						  pointStart: 2010
+						  //pointStart: 2010
 						}
 					  },
 
 					  series: [{
 						name: 'R8',
-						data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+						data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175,]
 					  }, {
 						name: '350Z',
 						data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
