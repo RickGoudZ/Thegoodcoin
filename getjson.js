@@ -2,7 +2,7 @@
 function fonctiont() {
 var staticUrl = 'https://www.thegoodcoin.nl/test.json';
 
-var nissan = $.getJSON(staticUrl, function(){
+var nissan = $.getJSON(staticUrl, function(nissan){
 console.log(nissan);
 });
 
