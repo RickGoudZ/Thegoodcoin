@@ -2,7 +2,7 @@
 var staticUrl = 'https://jsonplaceholder.typicode.com/users'
 
 $.getJSON('test.json', function(data){
-				console.log(data)
+				console.log(data.z)
 				console.log(typeof data)
 				//data = JSON.stringify(data)
 				//data = Object.values(data);
