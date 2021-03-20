@@ -38,6 +38,13 @@
 		<div id="chartborder1">
 			  <div id="container"></div>
 				<script>
+					
+					$.getJSON('test.json', function(data){
+						var categories = data[0].date;
+						console.log(categories)
+					});
+					
+					
 					Highcharts.chart('container', {
 					  chart: {
 								renderTo: 'container',
