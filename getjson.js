@@ -1,5 +1,5 @@
 // JavaScript Document
-var staticUrl = 'https://thegoodcoin.nl/test.json';
+var staticUrl = 'https://www.thegoodcoin.nl/test.json';
 
 $.getJSON(staticUrl, function(data){
 	console.log(data)
