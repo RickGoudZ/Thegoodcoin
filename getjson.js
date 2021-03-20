@@ -2,12 +2,9 @@
 var staticUrl = 'https://jsonplaceholder.typicode.com/users';
 
 var nissan = $.getJSON(staticUrl, function(data){
-				console.log(data.name)
+				console.log(data)
+				data = KSON.stringify(data)
+				console.log(data)
 				var output = document.getElementById('jsont');
-				output.innerHTML = data.email;
+				output.innerHTML = data;
 });
-
-function fonctiont() {	
-		var output = document.getElementById('jsontd');
-		output.innerHTML = 'new content';
-}
