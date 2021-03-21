@@ -40,10 +40,9 @@
 				<script>
 					
 					$.getJSON('test.json', function(data){
-						var categories = data[0].date;
-						console.log(categories)
-						options.xAxis.categories = data[0].date;
-						chart = new Highcharts.Chart(options);
+						var categories = data[0].map(o => o.name);
+						console.log(data[0].date)
+						chart.xAxis[0].setCategories(data.date);
 					});
 					
 					
@@ -68,7 +67,7 @@
 					  },
 
 					  xAxis: {
-						categories: [],
+						categories:[],
 						  //min: 0,
 						  //max: 12,
 					  },
