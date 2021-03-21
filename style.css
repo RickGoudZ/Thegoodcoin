@@ -58,6 +58,7 @@ body {
 }
 
 div {
+	position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: auto;
@@ -143,4 +144,9 @@ div {
 
 div {
 	color: #fff;
+}
+
+
+.wrapper {
+	width: 100%;
 }
