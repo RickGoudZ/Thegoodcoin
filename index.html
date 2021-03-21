@@ -40,7 +40,7 @@
 				<script>
 					
 					$.getJSON('test.json', function(data){
-						var categories = data[0].map(o => o.name);
+						var categories = data[0].date;
 						console.log(data[0].date)
 						chart.xAxis[0].setCategories(data.date);
 					});
@@ -67,7 +67,7 @@
 					  },
 
 					  xAxis: {
-						categories:[],
+						categories: [],
 						  //min: 0,
 						  //max: 12,
 					  },
