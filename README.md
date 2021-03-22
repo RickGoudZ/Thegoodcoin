@@ -1,2 +1,2 @@
 # Thegoodcoin
-Leboncoin scraper.
+Leboncoin scraper site.
