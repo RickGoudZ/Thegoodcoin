@@ -129,7 +129,6 @@ div {
 	border-radius: 12px;
 	width: 78.5%;
 	min-height: 420px;
-	min-width: 810px;
 	height: auto;
 	float: left;
 	margin: 10px 10px;
@@ -140,7 +139,8 @@ div {
 	border-radius: 12px;
 	background: #6E02D7;
 	height: 420px;
-	width: 271px;
+	width: 100%;
+	max-width: 271px;
 	margin: 10px;
 }
 
@@ -149,11 +149,18 @@ div {
 	background: #282828;
 	height: 120px;
 	width: 120px;
-	margin: 10px 10px 0px 0px;
+	margin: 10px 0px 0px 10px;
 	float: right;
 
 }
 
+#appicon {
+	border-radius: 15px;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+}
 
 div {
 	color: #fff;
@@ -194,3 +201,11 @@ div {
 	}
 }
 
+#columb1box {
+
+}
+
+@media only screen and (max-width : 1556px ){
+	#chartborder1 {
+		width: 99%;
+}
