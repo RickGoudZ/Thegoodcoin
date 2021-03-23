@@ -135,7 +135,7 @@ div {
 }
 
 #columb1box {
-	float: right;
+	float: left;
 	border-radius: 12px;
 	background: #6E02D7;
 	height: 420px;
