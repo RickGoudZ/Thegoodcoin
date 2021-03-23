@@ -42,9 +42,10 @@
 				<script>
 					
 					$.getJSON('test.json', function(data){
-						var categories = data[0].date;
 						console.log(data[0].date)
-						chart.xAxis[0].setCategories(data.date);
+						var test = date[0].date
+						chart.xAxis.categories = test;
+						chart.series[0].data = data;
 					});
 					
 					
@@ -69,9 +70,7 @@
 					  },
 
 					  xAxis: {
-						categories: [],
-						  //min: 0,
-						  //max: 12,
+						categories: null,
 					  },
 
 					  legend: {
