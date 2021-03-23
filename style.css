@@ -129,6 +129,7 @@ div {
 	border-radius: 12px;
 	width: 78.5%;
 	min-height: 420px;
+	min-width: 810px;
 	height: auto;
 	float: left;
 	margin: 10px 10px;
