@@ -127,7 +127,7 @@ div {
 #chartborder1 {
 	background: #282828;
 	border-radius: 12px;
-	width: 77%;
+	width: calc(100% - 320px);
 	min-height: 420px;
 	height: auto;
 	float: left;
