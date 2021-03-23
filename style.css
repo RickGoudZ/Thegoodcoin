@@ -12,9 +12,10 @@ body {
 
 
 .highcharts-figure, .highcharts-data-table table {
-  min-width: 360px; 
+  min-width: auto;
   max-width: 800px;
   margin: 1em auto;
+  min-height: 360px;
 }
 
 .highcharts-data-table table {
@@ -44,6 +45,7 @@ body {
 .highcharts-data-table tr:hover {
   background: #9E9E9E;
 }
+
 
 div {
 	position: relative;
@@ -125,10 +127,21 @@ div {
 #chartborder1 {
 	background: #282828;
 	border-radius: 12px;
-	width: 99%;
+	width: 78.5%;
+	min-height: 420px;
 	height: auto;
 	float: left;
 	margin: 10px 10px;
+}
+
+#columb1 {
+	border-radius: 12px;
+	background: #282828;
+	height: 110px;
+	width: 110px;
+	margin: 10px 10px 0px 0px;
+	float: right;
+	padding: 12px;
 }
 
 div {
@@ -163,6 +176,10 @@ div {
 @media only screen and (max-width : 635px ){
 	#rowc1 {
 		width: 92%;
+	}
+	
+	#chartborder1 {
+		min-width: 98%;
 	}
 }
 
