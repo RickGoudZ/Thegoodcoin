@@ -127,7 +127,7 @@ div {
 #chartborder1 {
 	background: #282828;
 	border-radius: 12px;
-	width: 78.5%;
+	width: 77%;
 	min-height: 420px;
 	height: auto;
 	float: left;
@@ -194,20 +194,38 @@ div {
 
 
 @media only screen and (max-width : 635px ){
+	#rcorners2 {
+		width: 92%
+	}
+	
 	#rowc1 {
 		width: 92%;
 	}
 	
 	#chartborder1 {
-		min-width: 98%;
+		min-width: 96%;
 	}
+	
+	#columb1box {
+		width: 96%;
+		height: auto;
+	}
+	#columb1 {
+	height: 150px;
+	width: 150px;
+	margin: 10px 10px 10px 13px;
+	float: right;
 }
 
+	.carrow {
+		width: 96%;
+	}
 #columb1box {
-
+	max-width: 98%;
 }
 
-@media only screen and (max-width : 1556px ){
+@media only screen and (max-width : 1492px ){
 	#chartborder1 {
-		width: 99%;
+		min-width: 96%;
+	}
 }
