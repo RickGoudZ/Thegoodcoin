@@ -10,6 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
 	<script src="https://code.highcharts.com/modules/data.js?_ga=2.110444805.120275499.1616445284-1703728495.1615995109"></script>
+	<script src="data.csv"></script>
 	</head> 
   <body> 
 	  <p id="rcorners1">thegoodcoin</p>
@@ -53,7 +54,14 @@
 			</div>
 		<div id="chartborder1">
 			  <div id="container"></div>
-				<script>					
+				<script>
+																																								
+					
+					$.getJSON('data.csv', function(csv){
+						document.getElementById('csv').innerHTML
+					}
+					);
+					
 					
 					Highcharts.chart('container', {
 					  chart: {
@@ -110,7 +118,7 @@
 								}
 							  },
 							  "data": {
-								"csv": "\"date\";\"Audirp\";\"Nissanzp\"\n\"12-03-2021\";86043;16335\n\"12-04-2021\";55403;34124\n\"12-05-2021\";86043;16335\n\"12-06-2021\";55403;34124\n\"12-07-2021\";86043;16335\n\"12-08-2021\";55403;34124",
+								"csv": window.location.origin + 'data.csv',
 								"googleSpreadsheetKey": false,
 								"googleSpreadsheetWorksheet": false
 							  },
