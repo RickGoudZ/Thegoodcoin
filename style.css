@@ -140,7 +140,7 @@ div {
 	background: #6E02D7;
 	height: 420px;
 	width: 100%;
-	max-width: 271px;
+	max-width: 280px;
 	margin: 10px;
 }
 
@@ -149,17 +149,19 @@ div {
 	background: #282828;
 	height: 120px;
 	width: 120px;
-	margin: 10px 0px 0px 10px;
+	margin: 10px 10px 0px 10px;
 	float: right;
 
 }
 
 #appicon {
-	border-radius: 15px;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 50%;
+	border-radius: 12px;
+	margin-bottom: auto;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+    display: block;
+	width: 75%;
 }
 
 div {
