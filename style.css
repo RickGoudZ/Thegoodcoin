@@ -134,15 +134,25 @@ div {
 	margin: 10px 10px;
 }
 
+#columb1box {
+	float: right;
+	border-radius: 12px;
+	background: #6E02D7;
+	height: 420px;
+	width: 271px;
+	margin: 10px;
+}
+
 #columb1 {
 	border-radius: 12px;
 	background: #282828;
-	height: 110px;
-	width: 110px;
+	height: 120px;
+	width: 120px;
 	margin: 10px 10px 0px 0px;
 	float: right;
-	padding: 12px;
+
 }
+
 
 div {
 	color: #fff;
