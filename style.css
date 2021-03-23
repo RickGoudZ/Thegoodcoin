@@ -140,11 +140,26 @@ div {
 	width: 100%;
 }
 
-.carrow {
+/*.carrow {
 	height: 200px;
 	overflow-x: scroll;
 	overflow-y: hidden;
+}*/
+
+
+.carrow {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
+
+.rowc1 {
+  display: inline-block;
+  }
+
 
 @media only screen and (max-width : 635px ){
 	#rowc1 {
