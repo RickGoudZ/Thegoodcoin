@@ -14,6 +14,14 @@
 	</head> 
   <body> 
 	  <p id="rcorners1">thegoodcoin</p>
+	  <pre id="csv2" style="display:none">"date","Audirp","Nissanzp"
+"12-03-2021","86043","16335"
+"12-04-2021","55403","34124"
+"12-05-2021","86043","16335"
+"12-06-2021","55403","34124"
+"12-07-2021","86043","16335"
+"12-08-2021","55403","34124"</pre>
+
 
     <div id="rcorners2">
 		<div>
@@ -112,13 +120,13 @@
 							  },
 
 							  "data": {
-								"csv": "\"date\";\"Audirp\";\"Nissanzp\"\n\"12-03-2021\";86043;16335\n\"12-04-2021\";55403;34124\n\"12-05-2021\";86043;16335\n\"12-06-2021\";55403;34124\n\"12-07-2021\";86043;16335\n\"12-08-2021\";55403;34124",
-								itemDelimiter: ';',
-								lineDelimiter: '\n',
-								decimalPoint: ',',
+								"csv": document.getElementById('csv2').innerHTML,
 								"googleSpreadsheetKey": false,
 								"googleSpreadsheetWorksheet": false
 							  },
+							  "credits": {
+								"text": "",
+								"enabled": false},
 
 					  responsive: {
 						rules: [{
