@@ -137,8 +137,10 @@ div {
 
 
 .wrapper {
+	height: 160px;
 	width: 100%;
 	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 
