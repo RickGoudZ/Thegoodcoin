@@ -13,3 +13,9 @@ $.getJSON('test.json', function(data){
 				document.getElementById('LastAvrAr').innerHTML = popAr;
 				});
 
+$.getJSON('data.csv', function(csv){
+				console.log(csv)
+				//var csv = Papa.parse(csv)
+				var output = document.getElementById('datat').innerHTML = csv;
+			}
+			);
