@@ -10,6 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/jquery.mousewheel.min.js"></script>
 	<script src="https://code.highcharts.com/modules/data.js?_ga=2.110444805.120275499.1616445284-1703728495.1615995109"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="data.csv"></script>
 	</head> 
   <body> 
@@ -55,14 +56,19 @@
 		<div id="chartborder1">
 			  <div id="container"></div>
 				<script>
+					var datacsv = $.getJSON('data.csv', function(csv){
+					console.log(csv)
+					}),
+					var csv = Papa.unparse(datacsv);
+				</script>
+				<script>
 																																								
 					
-					$.getJSON('data.csv', function(csv){
+					/*$.getJSON('data.csv', function(csv){
 						document.getElementById('csv').innerHTML
 					}
-					);
-					
-					
+					);*/
+
 					Highcharts.chart('container', {
 					  chart: {
 								renderTo: 'container',
@@ -117,8 +123,12 @@
 								  "animation": false
 								}
 							  },
+
 							  "data": {
-								"csv": window.location.origin + 'data.csv',
+								"csv": "\"date\";\"Audirp\";\"Nissanzp\"\n\"12-03-2021\";86043;16335\n\"12-04-2021\";55403;34124\n\"12-05-2021\";86043;16335\n\"12-06-2021\";55403;34124\n\"12-07-2021\";86043;16335\n\"12-08-2021\";55403;34124",
+								itemDelimiter: ';',
+								lineDelimiter: '\n',
+								decimalPoint: ',',
 								"googleSpreadsheetKey": false,
 								"googleSpreadsheetWorksheet": false
 							  },
