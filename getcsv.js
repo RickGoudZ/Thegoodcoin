@@ -5,7 +5,8 @@ var data;
 	  dataType: "text",       
 	  success: function(response)  
 	  {
-		var output = document.getElementById('datat') = response;
+		data = $.csv.toArrays(response);
+		document.getElementById('datat') = data;
 	    console.log(response)
 	  }   
 	});
