@@ -1,8 +1,11 @@
-// JavaScript Document
-$.getJSON('data.csv', function(csv){
-				console.log(csv)
-				console.log(typeof csv)
-				//var csv = Papa.parse(csv)
-				//var output = document.getElementById('datat') = csv;
-			}
-			);
+var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "data.csv",
+	  dataType: "text",       
+	  success: function(response)  
+	  {
+		var output = document.getElementById('datat') = response;
+	    console.log(response)
+	  }   
+	});
