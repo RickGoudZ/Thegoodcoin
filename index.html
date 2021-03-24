@@ -69,8 +69,8 @@
 						console.log(data)
 						//data = $.csv.toArrays(response);
 						document.getElementById('csvdata').innerHTML = response;
-					  }   
-					});
+					  
+					
 					Highcharts.chart('container', {
 					  chart: {
 								renderTo: 'container',
@@ -131,7 +131,7 @@
 							  },
 
 							  "data": {
-								"csv": document.getElementById('csv2').innerHTML,
+								"csv": data,
 								"googleSpreadsheetKey": false,
 								"googleSpreadsheetWorksheet": false
 							  },
@@ -156,7 +156,7 @@
 						}]
 					  }
 
-					});
+					})}});
 					console.log(data)
 			   </script>
 			</div>
