@@ -63,7 +63,7 @@ div {
   color: #fff;
   font-size: 20px;
   font-weight: 300;
-  margin-left: 25px;
+  margin-left: 2%;
   border-radius: 10px;
   background: #0B0B0B;
   padding: 12px; 
@@ -204,6 +204,9 @@ div {
 
 
 @media only screen and (max-width : 635px ){
+	#logotitle {
+		display: none;
+	}
 	#rcorners2 {
 		width: 92%
 	}
