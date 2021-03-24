@@ -5,7 +5,7 @@ $.ajax({
   dataType: "text",       
   success: function(response) {
 	var data = document.getElementById('csvdata').innerHTML = response;
-	console.log(typeof data)
+	console.log(data)
 	//data = $.csv.toArrays(response);
 	document.getElementById('csvdata').innerHTML = response;
   }   
