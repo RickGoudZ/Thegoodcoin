@@ -116,7 +116,7 @@ div {
 #carimg {
 	width: auto;
 	height: 75px;
-	margin: 5px;
+	margin: 0px;
 	float: left;
 	display: inline;
 	border-radius: 10%;
@@ -125,13 +125,24 @@ div {
 #rowtitle {
 	font-family: 'Roboto', sans-serif; 
 	vertical-align: top;
-	margin: 10px
+	margin: 10px;
+	margin-bottom: 0px;
 }
 
 #rowdata {
 	font-family: 'Roboto', sans-serif;
-	position: left;
 	text-align: left;
+	padding-top: 10px;
+}
+
+div > span#dif350z {
+	font-family: 'Roboto', sans-serif; 
+
+}
+
+span#difr8 {
+	font-family: 'Roboto', sans-serif; 
+
 }
 
 #chartborder1 {

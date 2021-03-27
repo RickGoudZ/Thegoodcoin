@@ -26,18 +26,21 @@
 	<div class='carrow'>
 	<div id="rowc1" class="rowc1">
 			<div><a href="/pictures/350z.jpg"><img src="/pictures/350z.jpg" id="carimg" alt="350z icon"></a></div>
-			<div><h3 id="rowtitle">350z</h3></div>
-			<div><p id="rowdata">Average : <span id="LastAvrNz"></span></p></div>
+			<div><h3 id="rowtitle">350z</h3>
+				<span id="dif350z" style="font-size: smaller; text-align: justify; float: left; position: absolute; left: 135px; top: 35px;"></span>
+			<div><p id="rowdata">Average : <span id="LastAvrNz"></span></p></div></div>
 		</div>
 		
 	    <div id="rowc1">
-		<a href="/pictures/r8.jpg"><img src="/pictures/r8.jpg" id="carimg" alt="r8 icon"></a>
+		<div><a href="/pictures/r8.jpg"><img src="/pictures/r8.jpg" id="carimg" alt="r8 icon"></a></div>
             <h3 id="rowtitle">R8</h3>
-			<p id="rowdata">Average : <span id="LastAvrAr"></span></p>
+			<span id="difr8" style="font-size: smaller; text-align: justify; float: left; position: absolute; left: 165px; top: 55px;"></span>
+			<div><p id="rowdata">Average : <span id="LastAvrAr"></span></p></div>
 		</div>
 		<div id="rowc1">
 		<a href="/pictures/944.jpg"><img src="/pictures/944.jpg" id="carimg" alt="944 icon"></a>
             <h3 id="rowtitle">944</h3>
+			<span id="dif944" style="font-size: smaller; text-align: justify; float: left; position: absolute; left: 165px; top: 55px;"></span>
 			<p id="rowdata">Average : <span id="LastAvrP9"></span></p>
 		</div>
 		<div id="rowc1">
@@ -58,6 +61,7 @@
 	</div>
 			</div>
 		<div>
+			<h1 style="display: none;">"The value for number is: " <span id="csvdata"></span></h1>
 		<div id="chartborder1">
 			  <div id="container"></div>
 				<script>
