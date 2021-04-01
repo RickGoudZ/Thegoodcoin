@@ -22,7 +22,9 @@ $.getJSON('dataJSON.json', function(data){
 				var increace350zPercentage = (increace350z / originalNb350z) * 100
 				var rounded350z = Math.round(increace350zPercentage * 10) / 10
 				document.getElementById('dif350z').innerHTML = (increace350zPercentage<0?"":"+") + rounded350z + "%";
-				if (rounded350z >= 0) {
+				if (rounded350z == 0){
+					dif350z.style.color = "rgb(255, 255, 255)";//white
+				} else if (rounded350z >= 0) {
 					dif350z.style.color = "rgb(223, 79, 54)";//red
 				} else {
 					dif350z.style.color = "rgb(75, 212, 75)";//green
