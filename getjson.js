@@ -35,7 +35,9 @@ $.getJSON('dataJSON.json', function(data){
 				var increacer8Percentage = (increacer8 / originalNbr8) * 100
 				var roundedr8 = Math.round(increacer8Percentage * 10) / 10
 				document.getElementById('difr8').innerHTML = (increacer8Percentage<0?"":"+") + roundedr8 + "%";
-				if (roundedr8 >= 0) {
+				if (roundedr8 == 0){
+					difr8.style.color = "rgb(255, 255, 255)";//white
+				} else if (roundedr8 >= 0) {
 					difr8.style.color = "rgb(223, 79, 54)";//red
 				} else {
 					difr8.style.color = "rgb(75, 212, 75)";//green
@@ -46,7 +48,9 @@ $.getJSON('dataJSON.json', function(data){
 				var increace944Percentage = (increace944 / originalNb944) * 100
 				var rounded944 = Math.round(increace944Percentage * 10) / 10
 				document.getElementById('dif944').innerHTML = (increace944Percentage<0?"":"+") + rounded944 + "%";
-				if (rounded944 >= 0) {
+				if (rounded944 == 0){
+					dif944.style.color = "rgb(255, 255, 255)";//white
+				} else if (rounded944 >= 0) {
 					dif944.style.color = "rgb(223, 79, 54)";//red
 				} else {
 					dif944.style.color = "rgb(75, 212, 75)";//green
