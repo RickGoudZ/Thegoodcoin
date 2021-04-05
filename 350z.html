@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>350z</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="substyle.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+        <script src="https://code.highcharts.com/highcharts.js"></script> 
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js?_ga=2.110444805.120275499.1616445284-1703728495.1615995109"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    </head>
+    <body><a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: absolute; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
+        <div class="area"></div><nav class="main-menu">
+      <ul>
+          <li>
+              <a href="http://thegoodcoin.nl">
+                  <span><i class="fa fa-chart-bar fa-2x"></i></i></span>
+                  <span class="nav-text">
+                      Dashboard
+                  </span>
+              </a>
+            
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                  <span style="font-size: 12px;"><i class="fa fa-warehouse fa-2x"></i></span>
+                  <span class="nav-text">
+                      Cars
+                  </span>
+              </a>
+              
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                 <i class="fa fa-server fa-2x"></i>
+                  <span class="nav-text">
+                      Http File Server
+                  </span>
+              </a>
+              
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                 <i class="fa fa-file-invoice-dollar fa-2x"></i>
+                  <span class="nav-text">
+                      Contact
+                  </span>
+              </a>
+              
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                 <i class="fa fa-ellipsis-h fa-2x"></i>
+                  <span class="nav-text">
+                      Info
+                  </span>
+              </a>
+              
+          </li>
+      </ul>
+  </nav> 
+        <div id="frame">  
+            <p href="https://thegoodcoin.nl" id="logotitle">THEGOODCOIN
+            <a href="https://thegoodcoin.nl"><img src="/pictures/icon.png" id="logo-img" alt="logo/icon"></a></p></div>
+            <h1 style="display: none;">"The value for number is: " <span id="csvdata"></span></h1>
+                <div id="border">
+                    <div id="chartborder1">
+                        <div id="container"></div>
+                          <script>
+                              $.ajax({
+                                type: "GET",  
+                                url: "data.csv",
+                                dataType: "text",       
+                                success: function(response) {
+                                  var data = document.getElementById('csvdata').innerHTML = response;
+                                  console.log(data)
+                                  //data = $.csv.toArrays(response);
+                                  document.getElementById('csvdata').innerHTML = response;
+                                
+                              
+                              Highcharts.chart('container', {
+                                chart: {
+                                          renderTo: 'container',
+                                          backgroundColor: 'transparent',
+                                          type: 'line'
+                                      },
+                                title: {
+                                  text: ''
+                                },
+          
+                                subtitle: {
+                                  text: ''
+                                },
+          
+                                yAxis: {
+                                  title: {
+                                    text: ''
+                                  }
+                                },
+          
+                                xAxis: {
+                                  categories: null,
+                                },
+                                colors: [
+                                  "#ff6f00",
+                                  "#000000",
+                                  "#1976d2"
+                              ],
+                                "exporting": {
+                                  "enabled": true,
+                                  "sourceWidth": 1080,
+                                  "filename": "Price chart Thegoodcoin"
+                              },
+          
+                                legend: {
+                                  layout: 'vertical',
+                                  align: 'right',
+                                  verticalAlign: 'middle',
+                                  "itemStyle":{
+                                  fontFamily: 'Roboto',
+                                  color: "#666666"
+                                  }
+                                },
+          
+                                plotOptions: {
+                                  series: {
+                                    label: {
+                                      connectorAllowed: false
+                                    },
+                                    //pointStart: 2010
+                                  }
+                                },
+          
+                                series: [
+								{
+								  "name": "Nissan350z",
+								  "turboThreshold": 0,
+                                  "visible": true								},
+								{
+								  "name": "Audir8",
+								  "turboThreshold": 0,
+                                  "visible": false
+								},
+								{
+								  "name": "Porsche944",
+								  "turboThreshold": 0,
+                                  "visible": false	
+								}
+							  ],
+							  "plotOptions": {
+								"series": {
+								  "animation": false
+								}
+							  },
+
+							  "data": {
+								"csv": data,
+								"googleSpreadsheetKey": false,
+								"googleSpreadsheetWorksheet": false
+							  },
+							  "credits": {
+								"text": "Thegoodcoin.nl",
+								"href": "http://www.thegoodcoin.nl"
+							},
+          
+                                responsive: {
+                                  rules: [{
+                                    condition: {
+                                      maxWidth: 500,
+                                    },
+          
+                                    chartOptions: {
+                                      legend: {
+                                        layout: 'horizontal',
+                                        align: 'center',
+                                        verticalAlign: 'bottom'
+          
+                                      }
+                                    }
+                                  }]
+                                }
+          
+                              })}});
+                              console.log(data)
+                         </script>
+                      </div>
+                      <div id="columb1box" style="justify-content: center;">
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://www.leboncoin.fr/recherche?category=2&brand=Nissan&model=350Z" target="_blank"><img src="/pictures/LBCLogo.jpg" id="appicon" alt="Leboncoin website/app"></a></div>
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://suchen.mobile.de/fahrzeuge/search.html?dam=0&isSearchRequest=true&ms=18700;6&sfmr=false&vc=Car" target="_blank"><img src="/pictures/MODELogo.jpg" id="appicon" alt="mobile website/app"></a></div>
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://github.com/RickGoudZ/Thegoodcoin" target="_blank"><img src="/pictures/GitHublogo.jpg" id="appicon" alt="Github rickgoudz.thegoodcoin repo"></a></div>
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://unsplash.com/s/photos/nissan-350z" target="_blank"><img src="/pictures/Unsplashlogo.jpg" id="appicon" alt="Unsplash link"></a></div>
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://www.instagram.com/nissanusa/" target="_blank"><img style="background-color: #fff; border-radius: 18px;" src="/pictures/Instagramlogo.jpg" id="appicon" alt="Insta link"></a></div>
+                        <div id="columb1" style="float: left">
+                            <a id="appicon" href="https://en.wikipedia.org/wiki/Nissan_350Z" target="_blank"><img src="/pictures/wikipedialogo.jpg" id="appicon" alt="Wiki link"></a></div>
+                        </div>
+                </div>
+    </body>
+</html>
