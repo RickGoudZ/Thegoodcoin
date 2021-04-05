@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://thegoodcoin.nl/sitemap.xml">
+<urlset xmlns="https://thegoodcoin.nl/sitemap.xml">
 
    <url>
 
-      <loc>http://thegoodcoin.nl/</loc>
+      <loc>https://thegoodcoin.nl/</loc>
 
       <changefreq>daily</changefreq>
 
