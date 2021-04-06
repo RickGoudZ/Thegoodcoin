@@ -16,6 +16,7 @@
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
     </head>
     <body><a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: absolute; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
         <div class="area"></div><nav class="main-menu">
@@ -205,6 +206,21 @@
                             <a id="appicon" href="https://www.instagram.com/nissanusa/" target="_blank"><img style="background-color: #fff; border-radius: 18px;" src="/pictures/Instagramlogo.jpg" id="appicon" alt="Insta link"></a></div>
                         <div id="columb1" style="float: left">
                             <a id="appicon" href="https://en.wikipedia.org/wiki/Nissan_350Z" target="_blank"><img src="/pictures/wikipedialogo.jpg" id="appicon" alt="Wiki link"></a></div>
+                        </div>
+                        <script>
+                          $(document).ready(function() { 
+                            $('.GeneralImg2').on('load',function(){
+                              $(this).fadeIn("slow");
+                            });
+                          });
+                          setInterval(function() {
+                          var myImageElement = document.getElementById('GeneralImg2');
+                          myImageElement.src = 'https://source.unsplash.com/collection/69269827/' + Math.random();
+                          console.log(myImageElement.src)
+                      }, 5000);
+                        </script>
+                        <div style="position: absolute" id="GeneralInfo">
+                          <img onload="fadeIn(this)" src="" alt="random img" id="GeneralImg2" class="GeneralImg2">
                         </div>
                 </div>
     </body>
