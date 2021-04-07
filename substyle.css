@@ -2,23 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #222222;
-    margin-right: 30px;
+    width: 100%;
+    height: 100%;
 }
 
 #frame {
     margin-left: 65px;
+    margin-right: 15px;
 }
 
 #border {
     background-color: #0B0B0B;
-    width: 96%;
+    width: auto;
     height: 430px;
     padding: 12px;
     border-radius: 12px;
-    margin-left: 60px;
-    margin-right: 10%;
+    float: right;
+    margin-right: 25px;
+    margin-left: 65px;
+    
+
 }
 
 #logotitle {
@@ -258,21 +267,62 @@ height: 100%;
     }
 
 #GeneralInfo {
+    position: relative;
     padding: 12px;
     border-radius: 12px;
     background-color: #111111;
-    width: auto;
-    margin: 10px;
+    width: calc(100% - 45% - 60px);
+    height: auto;
+    margin-top: 10px;
+    float: right;
+    margin-right: -12px;
 }
 
-#GeneralImg2 {
-    width: 35%;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+#GeneralImg {
+    min-width: 150px;
+    width: 20%;
+    max-height: 150px;
+    height: 236px;
+    display: none;
+    object-fit: cover;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    float: left;
 }
 
-#generalImg2:hover {
-    opacity:0;
+#preimg {
+    min-width: 150px;
+    width: 20%;
+    max-height: 150px;
+    height: 236px;
+    object-fit: cover;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    float: left;
+}
+
+span#info {
+    float: left;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    line-height: 0.08;
+}
+
+h5 {
+    color: gray;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 15px;
+    margin-top: -10px;
 }

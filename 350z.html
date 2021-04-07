@@ -209,18 +209,25 @@
                         </div>
                         <script>
                           $(document).ready(function() { 
-                            $('.GeneralImg2').on('load',function(){
+                            $('.GeneralImg').on('load',function(){
                               $(this).fadeIn("slow");
                             });
                           });
                           setInterval(function() {
-                          var myImageElement = document.getElementById('GeneralImg2');
+                          var myImageElement = document.getElementById('GeneralImg');
+                          var myImageElementpre = document.getElementById('preimg');
                           myImageElement.src = 'https://source.unsplash.com/collection/69269827/' + Math.random();
+                          myImageElementpre.style = 'display: none';
                           console.log(myImageElement.src)
                       }, 5000);
                         </script>
-                        <div style="position: absolute" id="GeneralInfo">
-                          <img onload="fadeIn(this)" src="" alt="random img" id="GeneralImg2" class="GeneralImg2">
+                        <div id="GeneralInfo">
+                          <img src="https://source.unsplash.com/collection/69269827/" alt="random img" id="preimg">
+                          <img onload="fadeIn(this)" src="" alt="random img" id="GeneralImg" class="GeneralImg">
+                          <span id="info">
+                          <h3>Name : 350z</h3>
+                          <h5>Make : Nissan</h5>
+                          </span>
                         </div>
                 </div>
     </body>
