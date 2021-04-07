@@ -221,12 +221,24 @@
                           console.log(myImageElement.src)
                       }, 5000);
                         </script>
+                        <script>
+                          $.getJSON('dataJSON.json', function(data){
+                             console.log(data[0].Nissan350z)
+                             console.log(typeof data)
+                             //#################
+                             var popNz = data[0].Nissan350z.pop(); //pop = last from array.
+                             document.getElementById('LastAvrNz').innerHTML = popNz;
+                            });
+                         </script>
                         <div id="GeneralInfo">
                           <img src="https://source.unsplash.com/collection/69269827/" alt="random img" id="preimg">
                           <img onload="fadeIn(this)" src="" alt="random img" id="GeneralImg" class="GeneralImg">
                           <span id="info">
-                          <h3>Name : 350z</h3>
+                          <h3>Name : 350z  Average : <span id="LastAvrNz"></span></h3>
                           <h5>Make : Nissan</h5>
+                          <h5>Production : 2003 - 2008</h5>
+                          <h5>Engine : VQ35DE V6</h5>
+                          <h5>Displacement : 3,5L</h5>
                           </span>
                         </div>
                 </div>
