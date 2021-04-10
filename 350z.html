@@ -30,12 +30,18 @@
               </a>
             
           </li>
-          <li class="has-subnav">
+          <li class="has-subnav" id="dropcars">
               <a href="#">
                   <span style="font-size: 12px;"><i class="fa fa-warehouse fa-2x"></i></span>
                   <span class="nav-text">
                       Cars
                   </span>
+                  <div id="dropdown">
+                    <a id="drop" href="#">All Cars</a>
+                    <a id="drop" href="https://thegoodcoin.nl/350z">350Z</a>
+                    <a id="drop" href="#">R8</a>
+                    <a id="drop" href="#">944</a>
+                  </div>
               </a>
               
           </li>
@@ -208,9 +214,9 @@
                             <a id="appicon" href="https://en.wikipedia.org/wiki/Nissan_350Z" target="_blank"><img src="/pictures/wikipedialogo.jpg" id="appicon" alt="Wiki link"></a></div>
                         </div>
                         <script>
-                          $(document).ready(function() { 
+                            $(document).ready(function() { 
                             $('.GeneralImg').on('load',function(){
-                              $(this).fadeIn("slow");
+                              
                             });
                           });
                           setInterval(function() {
@@ -232,7 +238,7 @@
                          </script>
                         <div id="GeneralInfo">
                           <img src="https://source.unsplash.com/collection/69269827/" alt="random img" id="preimg">
-                          <img onload="fadeIn(this)" src="" alt="random img" id="GeneralImg" class="GeneralImg">
+                          <img src="" alt="random img" id="GeneralImg" class="GeneralImg">
                           <span id="info">
                           <h3>Name : 350z  Average : <span id="LastAvrNz"></span></h3>
                           <h5>Make : Nissan</h5>
@@ -243,5 +249,47 @@
                           </span>
                         </div>
                 </div>
+                <script>
+                $.getJSON('http://127.0.0.2/emaildataJSON.php', function(data) {
+                  console.log(data[0])
+                  data = data[0].models[1][0][0]
+                  data = JSON.stringify(data)
+                  console.log(typeof data)
+                  document.getElementById('test').innerHTML = data;
+                    // JSON result in `data` variable
+                  });
+                </script>
+                <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">id</th>
+                  <th title="Field #2">name</th>
+                  <th title="Field #3">amount</th>
+                  <th title="Field #4">Remark</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td align="right">1</td>
+                  <td>Johnson, Smith, and Jones Co.</td>
+                  <td align="right">345.33</td>
+                  <td>Pays on time</td>
+                  </tr>
+                  <tr>
+                  <td align="right">2</td>
+                  <td>Sam &quot;Mad Dog&quot; Smith</td>
+                  <td align="right">993.44</td>
+                  <td> </td>
+                  </tr>
+                  <tr>
+                  <td align="right">3</td>
+                  <td>Barney &amp; Company</td>
+                  <td align="right">0</td>
+                  <td>Great to work with<br/>and always pays with cash.</td>
+                  </tr>
+                  <tr>
+                  <td align="right">4</td>
+                  <td>Johnson&#39;s Automotive</td>
+                  <td align="right">2344</td>
+                  <td> </td>
+                  </tr>
+                  </tbody></table>
     </body>
 </html>
