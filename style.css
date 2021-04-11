@@ -404,3 +404,40 @@ df
 	  font-weight: 300;
 	  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 	}
+
+	div#dropdown {
+		position: absolute;
+		left: 250px;
+		top: 0px;
+		display: inline-block;
+		background-color: #212121;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0,.2);
+		display: none;
+		border-style: solid;
+		border-color: gray;
+		border-width: 0px;
+		border-right-width: 1px;
+	}
+	li#dropcars:hover #dropdown{
+		display: block;
+	}
+	
+	div#dropdown a#drop{
+		color: #e2e2e2;
+		padding: 12px 16px;
+		display: block;
+		height: 21px;
+		font-family: 'Titillium Web';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+	}
+	
+	span#dropcars:hover #dropdown {
+		display: block;
+	}
+	
+	#dropdown a#drop:hover {
+		background-color: #141414;
+	}

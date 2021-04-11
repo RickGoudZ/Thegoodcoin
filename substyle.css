@@ -308,8 +308,8 @@ span#dropcars:hover #dropdown {
     padding: 12px;
     border-radius: 12px;
     background-color: #111111;
-    width: calc(100% - 45% - 60px);
-    min-width: 480px;
+    width: calc(100% - 50% - 150px);
+    min-width: 300px;
     height: auto;
     margin-top: 10px;
     float: right;
@@ -328,6 +328,7 @@ span#dropcars:hover #dropdown {
     border-color: grey;
     border-width: 1px;
     float: left;
+    margin-left: 0px;
 }
 
 #preimg {
@@ -376,5 +377,44 @@ span#info h5 {
     margin-top: 3px;
     margin-bottom: 0px;
     margin-left: 10px;
+}
+
+/*New listings*/
+
+div#newlistings {
+    border-radius: 10px;
+    background-color: #111111;
+    width: calc(100% - 45% + 60px);
+    max-width: 600px;
+    height: auto;
+    padding: 12px;
+    float: left;
+    margin-top: 10px;
+    margin-left: -12px;
+    margin-right: 5px;
+    min-width: 480px;
+    position: sticky;
+}
+
+div.lisings {
+    float: left;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(80, 80, 80);
+    width: calc(100%);
+    background-color: #222222;
+    margin-top: 2px;
+}
+
+img#img {
+    border-radius: 4px 0px 0px 4px;
+    min-width: 150px;
+    width: 35%;
+    max-height: 130px;
+    height: 236px;
+    object-fit: cover;
+    float: left;
+    position: relative;
 }
 

@@ -224,8 +224,9 @@
                           var myImageElementpre = document.getElementById('preimg');
                           myImageElement.src = 'https://source.unsplash.com/collection/69269827/' + Math.random();
                           myImageElementpre.style = 'display: none';
-                          console.log(myImageElement.src)
-                      }, 5000);
+                          myImageElement.style = 'display: block';
+                          //console.log(myImageElement.src)
+                      }, 10000);
                         </script>
                         <script>
                           $.getJSON('dataJSON.json', function(data){
@@ -248,11 +249,24 @@
                           <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/ef/a1/75/efa1751bf108d6fd3099b36cf836bd71bb333035.jpg" alt="">
                           </span>
                         </div>
+                        <section>
+                          <div id="newlistings">
+                            <div class="lisings" id="id0"></div>
+                            <div class="lisings" id="id1"></div>
+                            <div class="lisings" id="id2"></div>
+                            <div class="lisings" id="id3"></div>
+                            <div class="lisings" id="id4"></div>
+                            <div class="lisings" id="id5"></div>
+                            <div class="lisings" id="id6"></div>
+                            <div class="lisings" id="id7"></div>
+                            <div class="lisings" id="id8"></div>
+                          </div>
+                        </section>
                 </div>
                 <script>
                 $.getJSON('http://127.0.0.2/emaildataJSON.php', function(data) {
                   console.log(data[0])
-                  data = data[0].models[1][0][0]
+                  data = data[0].models[0][0]
                   data = JSON.stringify(data)
                   console.log(typeof data)
                   document.getElementById('test').innerHTML = data;
@@ -260,36 +274,22 @@
                   });
                 </script>
                 <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
-                <table class="table table-bordered table-hover table-condensed">
-                  <thead><tr><th title="Field #1">id</th>
-                  <th title="Field #2">name</th>
-                  <th title="Field #3">amount</th>
-                  <th title="Field #4">Remark</th>
-                  </tr></thead>
-                  <tbody><tr>
-                  <td align="right">1</td>
-                  <td>Johnson, Smith, and Jones Co.</td>
-                  <td align="right">345.33</td>
-                  <td>Pays on time</td>
-                  </tr>
-                  <tr>
-                  <td align="right">2</td>
-                  <td>Sam &quot;Mad Dog&quot; Smith</td>
-                  <td align="right">993.44</td>
-                  <td> </td>
-                  </tr>
-                  <tr>
-                  <td align="right">3</td>
-                  <td>Barney &amp; Company</td>
-                  <td align="right">0</td>
-                  <td>Great to work with<br/>and always pays with cash.</td>
-                  </tr>
-                  <tr>
-                  <td align="right">4</td>
-                  <td>Johnson&#39;s Automotive</td>
-                  <td align="right">2344</td>
-                  <td> </td>
-                  </tr>
-                  </tbody></table>
+                <div id="div1" style="position: absolute; margin-left: 400px;">created div</div>
+                <script>
+                $.getJSON('http://127.0.0.2/emaildataJSON.php', function(data) {
+                  content = data
+                  console.log(content[0]['models'].length)
+                
+                var content = content;
+                var i;
+                for (i = 0; i < content[0]['models'].length; i++) {
+                    console.log("bliepbloop")
+                    console.log(i)
+                    var imgsrc = '<img src="' + content[0]['models'][i][0]['imgsrc'] + '" id="img">' 
+                    var test = document.getElementById("id" + i).innerHTML += 
+                  //"name:" + content[0]['models'][i][0]['name']
+                  imgsrc;
+                  }
+                  });</script>
     </body>
 </html>
