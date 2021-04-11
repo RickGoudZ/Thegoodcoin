@@ -264,7 +264,7 @@
                         </section>
                 </div>
                 <script>
-                $.getJSON('https://192.168.1.19:443/emaildataJSON.php', function(data) {
+                $.getJSON('https://emaildata.thegoodcoin/emaildataJSON.php', function(data) {
                   console.log(data[0])
                   data = data[0].models[0][0]
                   data = JSON.stringify(data)
@@ -276,7 +276,7 @@
                 <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
                 <div id="div1" style="position: absolute; margin-left: 400px;">created div</div>
                 <script>
-                $.getJSON('https://192.168.1.19:443/emaildataJSON.php', function(data) {
+                $.getJSON('https://emaildata.thegoodcoin/emaildataJSON.php', function(data) {
                   content = data
                   console.log(content[0]['models'].length)
                 
