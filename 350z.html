@@ -251,20 +251,19 @@
                         </div>
                         <section>
                           <div id="newlistings">
-                            <div class="lisings" id="id0"></div>
-                            <div class="lisings" id="id1"></div>
-                            <div class="lisings" id="id2"></div>
-                            <div class="lisings" id="id3"></div>
-                            <div class="lisings" id="id4"></div>
-                            <div class="lisings" id="id5"></div>
-                            <div class="lisings" id="id6"></div>
-                            <div class="lisings" id="id7"></div>
-                            <div class="lisings" id="id8"></div>
+                            <div class="listings" id="id0"></div>
+                            <div class="listings" id="id1"></div>
+                            <div class="listings" id="id3"></div>
+                            <div class="listings" id="id2"></div>
+                            <div class="listings" id="id4"></div>
+                            <div class="listings" id="id5"></div>
+                            <div class="listings" id="id6"></div>
+                            <div class="listings" id="id8"></div>
                           </div>
                         </section>
                 </div>
                 <script>
-                $.getJSON('http://127.0.0.2/emaildataJSON.php', function(data) {
+                $.getJSON('http://192.168.1.19:8080/emaildataJSON.php', function(data) {
                   console.log(data[0])
                   data = data[0].models[0][0]
                   data = JSON.stringify(data)
@@ -276,7 +275,7 @@
                 <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
                 <div id="div1" style="position: absolute; margin-left: 400px;">created div</div>
                 <script>
-                $.getJSON('http://127.0.0.2/emaildataJSON.php', function(data) {
+                $.getJSON('http://192.168.1.19:8080/emaildataJSON.php', function(data) {
                   content = data
                   console.log(content[0]['models'].length)
                 
