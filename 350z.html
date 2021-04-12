@@ -196,7 +196,6 @@
                                 }
           
                               })}});
-                              console.log(data)
                          </script>
                       </div>
                       <div id="columb1box" style="justify-content: center;">
@@ -246,7 +245,6 @@
                           <h5>Production : 2003 - 2008</h5>
                           <h5>Engine : VQ35DE V6</h5>
                           <h5>Displacement : 3,5L</h5>
-                          <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/ef/a1/75/efa1751bf108d6fd3099b36cf836bd71bb333035.jpg" alt="">
                           </span>
                         </div>
                         <section>
@@ -264,32 +262,57 @@
                         </section>
                 </div>
                 <script>
-                $.getJSON('https://drive.google.com/file/d/1ID2NBHATfoN-dEb52_HI5o8cWOjrfjvs/view?usp=sharing', function(data) {
-                  console.log(data[0])
-                  data = data[0].models[0][0]
-                  data = JSON.stringify(data)
-                  console.log(typeof data)
-                  document.getElementById('test').innerHTML = data;
+                //$.getJSON('https://drive.google.com/file/d/1ID2NBHATfoN-dEb52_HI5o8cWOjrfjvs/view?usp=sharing', function(data) {
+                  //console.log(data[0])
+                  //data = data[0].models[0][0]
+                  //data = JSON.stringify(data)
+                  //console.log(typeof data)
+                  //document.getElementById('test').innerHTML = data;
                     // JSON result in `data` variable
-                  });
+                  //});
                 </script>
                 <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
                 <div id="div1" style="position: absolute; margin-left: 400px;">created div</div>
                 <script>
-                $.getJSON('https://drive.google.com/file/d/1ID2NBHATfoN-dEb52_HI5o8cWOjrfjvs/view?usp=sharing', function(data) {
-                  content = data
-                  console.log(content[0]['models'].length)
-                
-                var content = content;
-                var i;
-                for (i = 0; i < content[0]['models'].length; i++) {
+                  var i;
+                  var data =  '"headers": {"x-mashape-key": "$2b$10$hGmNQIDEGHH12i4HCPqSY.VdijWoHZpQ83lnsnNG2QTB4heM/HMZO"}';
+                $.ajax({
+                dataType: "json",
+                url: "https://api.jsonbin.io/v3/b/607425875b165e19f61d7fa8",
+                data: data,
+                success: function forloop() {  
+                  console.log('fdf');                            
+                //for (i = 0; i < data[0]['models'].length; i++) {
+                    //console.log("bliepbloop")
+                    //console.log(i)
+                   // var imgsrc = '<img src="' + data[0]['models'][i][0]['imgsrc'] + '" id="img">' 
+                   // var test = document.getElementById("id" + i).innerHTML += 
+                  //"name:" + content[0]['models'][i][0]['name']
+                  //imgsrc;
+                  }});
+                //}});</script>
+                <script>
+                let req = new XMLHttpRequest();
+                req.onreadystatechange = () => {
+                  if (req.readyState == XMLHttpRequest.DONE) {
+                    console.log(req.responseText);
+                    const obj = JSON.parse(req.responseText);
+                    var data = obj;
+                    console.log(data)
+                    for (i = 0; i < data['record'][0]['models'].length; i++) {
                     console.log("bliepbloop")
                     console.log(i)
-                    var imgsrc = '<img src="' + content[0]['models'][i][0]['imgsrc'] + '" id="img">' 
+                    var imgsrc = '<img src="' + data['record'][0]['models'][i][0]['imgsrc'] + '" id="img">' 
                     var test = document.getElementById("id" + i).innerHTML += 
-                  //"name:" + content[0]['models'][i][0]['name']
+                  //"name:" + data['record'][0]['models'][i][0]['name']
                   imgsrc;
+                    }
                   }
-                  });</script>
+                };
+
+                req.open("GET", "https://api.jsonbin.io/v3/b/607425875b165e19f61d7fa8", true);
+                req.setRequestHeader("X-Master-Key", "$2b$10$hGmNQIDEGHH12i4HCPqSY.VdijWoHZpQ83lnsnNG2QTB4heM/HMZO");
+                req.send();
+                </script>
     </body>
 </html>
