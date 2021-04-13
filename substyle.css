@@ -412,9 +412,47 @@ img#img {
     min-width: 150px;
     width: 35%;
     max-height: 130px;
-    height: 236px;
+    height: 100%;
     object-fit: cover;
     float: left;
     position: relative;
+    margin-right: 10px;
 }
 
+div.listings a {
+    margin: 0px;
+}
+
+div.listings i {
+}
+
+div.listings h2{
+    color: gray;
+    font-size: larger;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div.listings h2:active {
+    text-decoration: none;
+}
+
+div.listings h2:hover {
+    color: rgb(206, 84, 3);
+}
+
+div.listings h3 {
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 1px;
+    color: gray;
+}
+
+div.listings p {
+    position: relative;
+    bottom: -40px;
+    color: gray;
+    font-size: 12px;
+}

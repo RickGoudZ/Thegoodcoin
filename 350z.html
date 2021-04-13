@@ -302,10 +302,14 @@
                     for (i = 0; i < data['record'][0]['models'].length; i++) {
                     console.log("bliepbloop")
                     console.log(i)
-                    var imgsrc = '<img src="' + data['record'][0]['models'][i][0]['imgsrc'] + '" id="img">' 
-                    var test = document.getElementById("id" + i).innerHTML += 
-                  //"name:" + data['record'][0]['models'][i][0]['name']
-                  imgsrc;
+                    var imgsrc = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><img src="' + data['record'][0]['models'][i][0]['imgsrc'] + '" id="img"></a>' 
+                    var name = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><h2 id="h2">' + data['record'][0]['models'][i][0]['name'] + '</h2>'
+                    var price = '<h3 id="h3">' + data['record'][0]['models'][i][0]['price'] + "€</h3>"
+                    var place =  '<p id="p">' + data['record'][0]['models'][i][0]['place'] + '</p>'
+                    document.getElementById("id" + i).innerHTML += imgsrc;
+                    document.getElementById("id" + i).innerHTML += name;
+                    document.getElementById("id" + i).innerHTML += price;
+                    document.getElementById("id" + i).innerHTML += place;
                     }
                   }
                 };
