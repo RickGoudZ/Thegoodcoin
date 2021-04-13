@@ -18,7 +18,7 @@
         <script src="https://rawgit.com/mholt/PapaParse/master/papaparse.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
     </head>
-    <body><a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: absolute; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
+    <body><a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: fixed; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
         <div class="area"></div><nav class="main-menu">
       <ul>
           <li>
@@ -248,18 +248,12 @@
                           </span>
                         </div>
                         <section>
+                          <div id="overflowlistings">
                           <div id="newlistings">
-                            <div class="listings" id="id0"></div>
-                            <div class="listings" id="id1"></div>
-                            <div class="listings" id="id3"></div>
-                            <div class="listings" id="id2"></div>
-                            <div class="listings" id="id4"></div>
-                            <div class="listings" id="id5"></div>
-                            <div class="listings" id="id6"></div>
-                            <div class="listings" id="id7"></div>
-                            <div class="listings" id="id8"></div>
+                          </div>
                           </div>
                         </section>
+                        <div style="position:relative; float: left; background-color: #222222; border: #222222; bottom: 0px; border-style: solid; height: 20px; width: 100%;"></div>
                 </div>
                 <script>
                 //$.getJSON('https://drive.google.com/file/d/1ID2NBHATfoN-dEb52_HI5o8cWOjrfjvs/view?usp=sharing', function(data) {
@@ -302,14 +296,24 @@
                     for (i = 0; i < data['record'][0]['models'].length; i++) {
                     console.log("bliepbloop")
                     console.log(i)
+                    //!!!!!!!!
+                    const newDiv = document.createElement("div");
+                    newDiv.setAttribute('class', 'listings');
+                    newDiv.setAttribute('id', 'id' + i);
+                    const currentDiv = document.getElementById("div1");
+                    //document.body.insertBefore(newDiv, currentDiv);
+                    document.getElementById("newlistings").appendChild(newDiv);
+                    //!!!!!!!!
                     var imgsrc = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><img src="' + data['record'][0]['models'][i][0]['imgsrc'] + '" id="img"></a>' 
                     var name = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><h2 id="h2">' + data['record'][0]['models'][i][0]['name'] + '</h2>'
                     var price = '<h3 id="h3">' + data['record'][0]['models'][i][0]['price'] + "€</h3>"
                     var place =  '<p id="p">' + data['record'][0]['models'][i][0]['place'] + '</p>'
+                    var heart = '<i class="far fa-heart"></i>' 
                     document.getElementById("id" + i).innerHTML += imgsrc;
                     document.getElementById("id" + i).innerHTML += name;
                     document.getElementById("id" + i).innerHTML += price;
                     document.getElementById("id" + i).innerHTML += place;
+                    document.getElementById("id" + i).innerHTML += heart;
                     }
                   }
                 };
