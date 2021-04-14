@@ -268,24 +268,6 @@
                 <p id="test" style="position: absolute; left: 150px; z-index: 100000; color: white; top: 800px;"></p>
                 <div id="div1" style="position: absolute; margin-left: 400px;">created div</div>
                 <script>
-                  var i;
-                  var data =  '"headers": {"x-mashape-key": "$2b$10$hGmNQIDEGHH12i4HCPqSY.VdijWoHZpQ83lnsnNG2QTB4heM/HMZO"}';
-                $.ajax({
-                dataType: "json",
-                url: "https://api.jsonbin.io/v3/b/607425875b165e19f61d7fa8",
-                data: data,
-                success: function forloop() {  
-                  console.log('fdf');                            
-                //for (i = 0; i < data[0]['models'].length; i++) {
-                    //console.log("bliepbloop")
-                    //console.log(i)
-                   // var imgsrc = '<img src="' + data[0]['models'][i][0]['imgsrc'] + '" id="img">' 
-                   // var test = document.getElementById("id" + i).innerHTML += 
-                  //"name:" + content[0]['models'][i][0]['name']
-                  //imgsrc;
-                  }});
-                //}});</script>
-                <script>
                 let req = new XMLHttpRequest();
                 req.onreadystatechange = () => {
                   if (req.readyState == XMLHttpRequest.DONE) {
