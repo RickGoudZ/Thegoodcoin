@@ -213,19 +213,17 @@
                             <a id="appicon" href="https://en.wikipedia.org/wiki/Nissan_350Z" target="_blank"><img src="/pictures/wikipedialogo.jpg" id="appicon" alt="Wiki link"></a></div>
                         </div>
                         <script>
-                            $(document).ready(function() { 
-                            $('.GeneralImg').on('load',function(){
-                              
-                            });
-                          });
-                          setInterval(function() {
-                          var myImageElement = document.getElementById('GeneralImg');
-                          var myImageElementpre = document.getElementById('preimg');
-                          myImageElement.src = 'https://source.unsplash.com/collection/69269827/' + Math.random();
-                          myImageElementpre.style = 'display: none';
-                          myImageElement.style = 'display: block';
+                          //window.onload = init;
+
+                          //function init(){
+                          //var i;
+                          //for (i = 0; i < 3; i++) {
+                          //console.log(i)
+                          //var id = 'GeneralImg' + i;
+                          //var myImageElement = document.getElementById(id);
+                          //myImageElement.src = 'https://source.unsplash.com/collection/69269827/' + Math.random();
                           //console.log(myImageElement.src)
-                      }, 10000);
+                          //}};
                         </script>
                         <script>
                           $.getJSON('dataJSON.json', function(data){
@@ -237,10 +235,13 @@
                             });
                          </script>
                         <div id="GeneralInfo">
-                          <img src="https://source.unsplash.com/collection/69269827/" alt="random img" id="preimg">
-                          <img src="" alt="random img" id="GeneralImg" class="GeneralImg">
+                          <h3>350z  -  Average : <span id="LastAvrNz"></span></h3>
+                          <section class="GeneralImgdiv">
+                          <div class="GeneralImg"><img src="https://source.unsplash.com/2xlZnxLbS-A" alt="random img" id="GeneralImg0" class="img"></div>
+                          <div class="GeneralImg2"><img src="https://source.unsplash.com/HFBgpm-5k-4" alt="random img" id="GeneralImg1" class="img"></div>
+                          <div class="GeneralImg3"><img src="https://source.unsplash.com/Ou0RvTuLvBo" alt="random img" id="GeneralImg2" class="img"></div>
+                          </section>
                           <span id="info">
-                          <h3>Name : 350z  Average : <span id="LastAvrNz"></span></h3>
                           <h5>Make : Nissan</h5>
                           <h5>Production : 2003 - 2008</h5>
                           <h5>Engine : VQ35DE V6</h5>
