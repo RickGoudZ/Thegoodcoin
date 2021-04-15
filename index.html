@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 	</head> 
   <body>
-		<a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: absolute; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
+		<a href="https://thegoodcoin.nl"><img src="/pictures/icon_gray.png" style="position: fixed; display: inline-block; width: 37px; left: 12px; top: 12px; z-index: 10000;" alt="logo/icon gray"></a>
 	  <div class="area"></div><nav class="main-menu">
 	<ul>
 		<li>
@@ -252,13 +252,55 @@
 			<div id="columb1" style="float: left"></div>
 			</div>
 			</div>
-			<img src="/pictures/r8.jpg" class="wrapper">
+			<section>
+				<div id="overflowlistings">
+				<div id="newlistings">
+				</div>
+				</div>
+			  </section>
 			</div>
+			<script>
+                let req = new XMLHttpRequest();
+                req.onreadystatechange = () => {
+                  if (req.readyState == XMLHttpRequest.DONE) {
+                    console.log(req.responseText);
+                    const obj = JSON.parse(req.responseText);
+                    var data = obj;
+                    console.log(data)
+                    for (i = 0; i < data['record'][0]['models'].length; i++) {
+                    console.log("bliepbloop")
+                    console.log(i)
+                    //!!!!!!!!
+                    const newDiv = document.createElement("div");
+                    newDiv.setAttribute('class', 'listings');
+                    newDiv.setAttribute('id', 'id' + i);
+                    const currentDiv = document.getElementById("div1");
+                    //document.body.insertBefore(newDiv, currentDiv);
+                    document.getElementById("newlistings").appendChild(newDiv);
+                    //!!!!!!!!
+                    var imgsrc = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><img src="' + data['record'][0]['models'][i][0]['imgsrc'] + '" id="img"></a>' 
+                    var name = '<a href="' + data['record'][0]['models'][i][0]['page'] + '" target="_blank"><h2 id="h2">' + data['record'][0]['models'][i][0]['name'] + '</h2>'
+                    var price = '<h3 id="h3">' + data['record'][0]['models'][i][0]['price'] + "€</h3>"
+                    var place =  '<p id="p">' + data['record'][0]['models'][i][0]['place'] + '</p>'
+                    var heart = '<i class="far fa-heart"></i>' 
+                    document.getElementById("id" + i).innerHTML += imgsrc;
+                    document.getElementById("id" + i).innerHTML += name;
+                    document.getElementById("id" + i).innerHTML += price;
+                    document.getElementById("id" + i).innerHTML += place;
+                    document.getElementById("id" + i).innerHTML += heart;
+                    }
+                  }
+                };
+
+                req.open("GET", "https://api.jsonbin.io/v3/b/607580a9ee971419c4d862ba", true);
+                req.setRequestHeader("X-Master-Key", "$2b$10$hGmNQIDEGHH12i4HCPqSY.VdijWoHZpQ83lnsnNG2QTB4heM/HMZO");
+                req.send();
+                </script>
 	  <script type="text/javascript" src="test.json"></script>
 	  <script src="getjson.js" type="text/javascript"></script>
 	  <script src="getcsv.js" type="text/javascript"></script>
-	  <h1>"The value for number is: " <span id="test"></span></h1>
 	</div>
+	<div style="position:relative; float: left; background-color: #222222; border: #222222; bottom: 0px; border-style: solid; height: 20px; width: 100%;"></div>
 </div>
 	</body>
 	</html>

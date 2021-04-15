@@ -498,11 +498,11 @@ div.listings h2{
     color: gray;
     font-size: larger;
     margin: 0px;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 10px;
     overflow: hidden;
     max-width: 350px;
-    max-height: 20px;
+    max-height: 35px;
 }
 
 div.listings h2:active {

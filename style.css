@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,400;1,500&display=swap');
 #page {
 	margin-left: 45px;
 }
@@ -84,15 +85,11 @@ div {
 }
 
 #rcorners2 {
-  font-family: 'Dosis', sans-serif;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 300;
   border-radius: 12px;
   background: #0B0B0B;
   padding: 12px; 
   width: 95%;
-  height: auto;
+  height: 625px;
   text-align: center;
   line-height: 44px;
   position: center center;
@@ -298,7 +295,7 @@ df
 	.main-menu {
 	background:#212121;
 	border-right:1px solid #303030;
-	position:absolute;
+	position:fixed;
 	top:0;
 	bottom:0;
 	height:100%;
@@ -441,3 +438,127 @@ df
 	#dropdown a#drop:hover {
 		background-color: #141414;
 	}
+
+	/*New listings*/
+
+div#newlistings {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 480px;
+    border-radius: 8px;
+}
+
+#overflowlistings {
+    border-radius: 10px;
+    background-color: #111111;
+    width: calc(100% - 45% + 60px);
+    max-width: 600px;
+    height: 480px;
+    padding: 12px;
+    float: left;
+    min-width: 480px;
+    margin-top: 15px;
+    margin-left: -12px;
+}
+
+div.listings {
+    position: relative;
+    float: left;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(80, 80, 80);
+    width: 98%;
+    background-color: #222222;
+    margin-top: 2px;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+img#img {
+    border-radius: 4px 0px 0px 4px;
+    min-width: 150px;
+    width: 25%;
+    max-height: 100px;
+    min-height: 100px;
+    height: 100%;
+    min-height: 100px;
+    object-fit: cover;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+
+
+div.listings:empty {
+    display: none;
+}
+
+div.listings a {
+    margin: 0px;
+    text-decoration: none;
+	text-align: left;
+}
+
+.far {
+    position: relative;
+    color: #555;
+    float: right;
+    right: 10px;
+    bottom: 12px;
+	line-height: 20px;
+}
+
+div.listings h2{
+	line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: gray;
+    font-size: larger;
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+    max-width: 350px;
+    max-height: 20px;
+	text-align: left;
+}
+
+div.listings h2:active {
+    text-decoration: none;
+}
+
+div.listings h2:hover {
+    color: rgb(206, 84, 3);
+}
+
+div.listings h3 {
+	line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin: 0px;
+    margin-top: 1px;
+    color: gray;
+	text-align: left;
+}
+
+div.listings p {
+	line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    bottom: -20px;
+    color: gray;
+    font-size: 12px;
+	text-align: left;
+}
+/*!!!!!!!!!!*/
+::-webkit-scrollbar{
+    height: 4px;
+    width: 4px;
+    background: gray;
+    overflow: visible;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(65, 65, 65);
+    border-radius: 10px;
+}

@@ -277,9 +277,8 @@
                     var data = obj;
                     console.log(data)
                     for (i = 0; i < data['record'][0]['models'].length; i++) {
-                    console.log("bliepbloop")
-                    console.log(i)
                     //!!!!!!!!
+                    if (data['record'][0]['models'][i][0]['model'] == '350Z'){
                     const newDiv = document.createElement("div");
                     newDiv.setAttribute('class', 'listings');
                     newDiv.setAttribute('id', 'id' + i);
@@ -298,7 +297,7 @@
                     document.getElementById("id" + i).innerHTML += place;
                     document.getElementById("id" + i).innerHTML += heart;
                     }
-                  }
+                  }}
                 };
 
                 req.open("GET", "https://api.jsonbin.io/v3/b/607580a9ee971419c4d862ba", true);
