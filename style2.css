@@ -1,0 +1,15 @@
+body {
+    background: blueviolet;
+    overflow: hidden;
+}
+
+div.border {
+    border-radius: 7px;
+    min-width: 500px;
+    min-height: 800px;
+    width: 50%;
+    height: 90%;
+    margin-left: 25%;
+    background: black;
+    display: inline-block
+}
