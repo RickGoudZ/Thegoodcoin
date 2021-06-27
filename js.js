@@ -7,7 +7,7 @@ req.onreadystatechange = () => {
       var data = JSON.parse(req.responseText);
       console.log(data);
                   console.log(data['record'][0])
-    var allimg = data.record[0].models[0][0].imgurl
+    var allimg = data.record[0].models[1][0].imgurl
     console.log(allimg)
     document.getElementById('allimg').src = allimg;
 
@@ -18,7 +18,7 @@ req.onreadystatechange = () => {
 
                 var totallistings = counter;
                 console.log(totallistings)
-                document.getElementById('h2inh2').innerHTML += totallistings + '.'
+                document.getElementById('TL').innerHTML += 'Total new listings: ' + totallistings + '.'
     }
   };
   

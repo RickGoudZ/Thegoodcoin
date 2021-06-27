@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,600;1,500&display=swap');
+
+html {
+    height: 100%;
+    margin: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    color: white;
+  }
+  body {
+    min-height: 100%;
+    margin: 0px;
+    background-color: rgb(41, 41, 41);
+  }
+
+h1 {
+    color: white;
+    position: fixed;
+    margin: 25px;
+    font-family: 'Mate SC', serif;
+}
+
+p#shift {
+    bottom: calc(800px + 2px);
+    position: absolute;
+    display: block;
+    margin: 0px;
+    margin-left: 8px;
+    color: gray;
+    font-family: 'Mate SC', serif;
+}
+
+#borders {
+    bottom: -4px;
+    position: absolute;
+    display: block;
+    width: max-content;
+    height: 800px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+
+.box {
+    height: 80%;
+    width: 20%;
+    max-width: 200px;
+    min-height: 800px;
+    overflow: hidden;
+    float: left;
+    transition: width 5s;
+}
+
+.box:hover {
+    width: 25%;
+    max-width: 260px;
+}
+
+img {
+    min-height: 100%;
+    height: 800px;
+    position: relative;
+    margin-left: -100%;
+    filter: grayscale(50%);
+}
+
+.boxtitle {
+    font-size: 1vw;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    position: relative;
+    min-width: 200px;
+    z-index: 100;
+    margin: 0px;
+    color: rgb(73, 73, 73);
+}
+
+.titlediv {
+    width: 200px;
+    position: absolute;
+    top: 0px;
+}
+
+#popup {
+    min-width: 90%;
+    height: 80%;
+    background-color: rgb(26, 26, 26);
+    position: absolute;
+    z-index: 9999;
+    margin: 5%;
+    opacity: 0.8;
+    border-radius: 3px;
+}
+
+
+/*img:hover {
+    filter: grayscale(0%);
+  }*/
+::-webkit-scrollbar {
+    display: none;
+  }

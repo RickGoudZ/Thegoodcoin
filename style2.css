@@ -11,12 +11,20 @@ body {
     overflow: hidden;
 }
 
+#title {
+    margin-left: 35%;
+    color: white;
+    float: left;
+    font-size: x-large;
+    font-weight: bold;
+}
+
 div.border {
     border-radius: 10px;
     width: 30%;
-    height: 90%;
+    height: 85%;
     left: 35%;
-    margin-top: 2%;
+    margin-top: 5%;
     background: black;
     position: absolute;
     padding: 12px;
@@ -44,7 +52,8 @@ div.border {
 
 img {
     width: 45%;
-    min-height: 100%;
+    max-width: 300px;
+    min-height: calc(100% + 24px);
     overflow: hidden;
     position: relative;
     margin: auto;
@@ -52,15 +61,33 @@ img {
     bottom: 12px;
     right: 12px;
     border-radius: 15px 0px 0px 15px;
+    float: left;
+    z-index: 99;
+}
+
+.rectangle {
+    background-color: yellowgreen;
+    width: 5%;
+    min-height: calc(100% + 24px);
+    z-index: 999999;
+    position: relative;
+    bottom: 12px;
+    left: calc(45% - 5%);
 }
 /**/
 
 h1 {
-
+    position: relative;
+    margin: 0px;
+    float: left;
 }
 
 h2 {
     font-size: medium;
+    display: inline;
+    position: relative;
+    margin: 0px;
+    float: left;
 }
 
 
